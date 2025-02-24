@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng giá</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+
+        table {
+            width: 800px;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        th {
+            background-color: rgba(0, 132, 255, 0.429);
+            text-align: center;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>BẢNG GIÁ ĐĂNG KÝ CƯỚC DỊCH VỤ INTERNET</h1>
+    <table>
+        <tr>
+            <th colspan=2>VNN</th>
+            <th colspan=2>FPT</th>
+        </tr>
+        <tr>
+            <th colspan=2>Cước truy cập Internet</th>
+            <th colspan=2>Thẻ kết nối Internet</th>
+        </tr>
+        <tr>
+            <td><b>Thời gian</b></td>
+            <td><b>Cước truy cập(đ/ph)</b></td>
+            <td><b>Số giờ kết nối</b></td>
+            <td><b>Mệnh giá thẻ</b></td>
+        </tr>
+        <tr>
+            <td>0h-7h</td>
+            <td>100</td>
+            <td>14h</td>
+            <td>100.000đ</td>
+        </tr>
+        <tr>
+            <td colspan=2>Cước thuê bao trong tháng: <b>27.273đ/tháng</b></td>
+            <td>110h</td>
+            <td>500.000đ</td>
+        </tr>
+
+    </table>
+    <div class="container">
+        <h2>Đăng ký cước dịch vụ Internet</h2>
+        <form action="">
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name">
+            <label for="numbers" id="numbers">Số CMND:</label>
+            <input type="number" id="numbers" name="numbers">
+
+            <lable for="gender"><br>Đăng ký:<br></label>
+                <lable for="gender">Mua thẻ:</lable>
+
+                <input type="radio" id="numbers" name="gender" value="100.000000">
+                <label for="numbers">100.000đ</label>
+                <input type="radio" id="numbers" name="gender" value="500.000000">
+                <label for="numbers">500.000đ</label>
+
+
+                <button type="submit">Cập nhật</button>
+                <button type="cancle">Hủy bỏ</button>
+        </form>
+
+</body>
+
+</html>

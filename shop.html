@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: white;
+            /* Màu nền trắng */
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            border: 2px solid black;
+        }
+
+        /* Màu đen */
+        header {
+            padding: 5px;
+            position: relative;
+            top: 10px;
+            width: 100%;
+            background-color: white;
+            /* Màu nền trắng */
+            z-index: 1000;
+            /* Đảm bảo header luôn ở trên cùng */
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+
+        .search-box {
+            margin-right: 20px;
+        }
+
+        .cart-info {
+
+            background-color: #FF3399;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            font-family: Arial, sans-serif;
+            /* Thêm kiểu chữ */
+        }
+
+        .cart-info:hover {
+            background-color: #FFFF00;
+            color: #FF0000;
+        }
+
+        /* CSS cho menu cấp 1 */
+        .menu-level-1 {
+            background-color: #000000;
+            /* Màu nền đen */
+            color: #FFFFFF;
+            /* Chữ màu trắng */
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            /* Cách đều các mục */
+        }
+
+        .menu-level-1 li {
+            flex: 1;
+            /* Chia đều các ô */
+            text-align: center;
+            position: relative;
+            padding: 10px 0;
+            /* Khoảng cách cho mũi tên */
+            transition: background-color 0.3s;
+            /* Hiệu ứng chuyển màu */
+        }
+
+        .menu-level-1 li::after {
+            content: '▼';
+            /* Mũi tên đi xuống */
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            color: white;
+            /* Màu trắng */
+        }
+
+        .menu-level-1 li:hover {
+            background-color: #FF3399;
+            /* Màu nền hồng khi di chuột */
+        }
+
+        /* CSS cho menu cấp 2 */
+        .menu-level-2 {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #FFFFFF;
+            /* Màu nền trắng */
+            color: #000000;
+            /* Chữ màu đen */
+            list-style-type: none;
+            padding: 10px;
+            border: 1px solid #CCCCCC;
+        }
+
+        .menu-level-2 li {
+            padding: 5px 10px;
+        }
+
+        .menu-level-2 li a {
+            color: #000000;
+            /* Chữ màu đen */
+            text-decoration: none;
+        }
+
+        .menu-level-1 li:hover .menu-level-2 {
+            display: block;
+            /* Hiển thị menu cấp 2 khi di chuột vào menu cấp 1 */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://png.pngtree.com/png-clipart/20190520/original/pngtree-shop-store-icon-png-image_3563809.jpg"
+                width="100px" height="100px" alt="Logo">
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm...">
+        </div>
+        <div class="cart-info">
+            <span>0 Item($)-$0.00</span>
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <ul class="menu-level-1">
+        <li>Men
+            <ul class="menu-level-2">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+            </ul>
+        </li>
+        <li>Women
+            <ul class="menu-level-2">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+            </ul>
+        </li>
+        <li>Kids
+            <ul class="menu-level-2">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+            </ul>
+        </li>
+        <li>Accessories
+            <ul class="menu-level-2">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+            </ul>
+        </li>
+        <li>Sale
+            <ul class="menu-level-2">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

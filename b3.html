@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điền Thông Tin Ứng Tuyển</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            height: 30px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        select {
+            width: 100%;
+            height: 30px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            height: 30px;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Điền Thông Tin Ứng Tuyển</h2>
+        <form id="form-apply">
+            <label for="fullname">Họ và tên:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="position">Vị trí ứng tuyển:</label>
+            <select id="position" name="position" required>
+                <option value="">Chọn vị trí</option>
+                <option value="Developer">Developer</option>
+                <option value="Designer">Designer</option>
+                <option value="Manager">Manager</option>
+            </select>
+
+            <label for="experience">Kinh nghiệm:</label>
+            <textarea id="experience" name="experience" required></textarea>
+
+            <label for="skills">Kỹ năng:</label>
+            <input type="checkbox" id="skill1" name="skills" value="HTML">
+            <label for="skill1">HTML</label>
+            <input type="checkbox" id="skill2" name="skills" value="CSS">
+            <label for="skill2">CSS</label>
+            <input type="checkbox" id="skill3" name="skills" value="JavaScript">
+            <label for="skill3">JavaScript</label>
+
+            <label for="gender">Giới tính:</label>
+            <input type="radio" id="male" name="gender" value="Nam">
+            <label for="male">Nam</label>
+            <input type="radio" id="female" name="gender" value="Nữ">
+            <label for="female">Nữ</label>
+
+            <button type="submit">Gửi thông tin</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('form-apply');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const params = new URLSearchParams(formData);
+            const url = 'b3.html?' + params.toString();
+            window.location.href = url;
+        });
+    </script>
+</body>
+
+</html>

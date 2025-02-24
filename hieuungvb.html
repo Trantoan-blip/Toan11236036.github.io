@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiệu ứng văn bản chuyển động</title>
+    <style>
+        .animated-text {
+            width: 45%;
+            overflow: hidden;
+            white-space: nowrap;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .animated-text p {
+            display: inline-block;
+            font-size: 20px;
+            color: red;
+            position: absolute;
+            animation: moveText 5s linear infinite;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="animated-text">
+        <p>Chúc mừng năm mới 2025</p>
+
+    </div>
+
+</body>
+
+</html>
