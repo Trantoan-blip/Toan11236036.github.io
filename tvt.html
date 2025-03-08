@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor|Thử thách lập trình</title>
+
+    <style>
+        #navigation {
+            background-color: white;
+            padding: 15px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #navigation img {
+            height: 30px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .category {
+            color: black;
+            margin: 0 15px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            transition: color 0.3s;
+            font-style: italic;
+            position: relative;
+        }
+
+        .category::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: red;
+            bottom: -5px;
+            left: 50%;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .category:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .category-container {
+            display: flex;
+        }
+
+        #content {
+            padding: 20px;
+            margin-top: 80px;
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .login-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .login-btn img {
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .right-image {
+            max-width: 60%;
+            height: auto;
+            margin-top: 100px;
+            margin-right: -200px;
+        }
+
+        .left-text {
+            max-width: 40%;
+            font-size: 3rem;
+            line-height: 1.5;
+            color: rgba(0, 34, 255, 0.419);
+            margin-top: 100px;
+
+        }
+
+        .additional-text {
+            color: black;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .white-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 150px;
+            max-width: 50%;
+            height: 400px;
+            width: 500px;
+            margin-right: 450px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .white-box-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .LEARNING-PATHS {
+            background-color: white;
+            padding: 15px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .LEARNING-PATHS img {
+            ax-width: 60%;
+            height: auto;
+            margin-top: 100px;
+            margin-right: -200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navigation">
+        <img id="logo"
+            src="https://www.frontendmentor.io/_next/image?url=%2Fstatic%2Fimages%2Flogo-desktop.svg&w=640&q=75"
+            alt="Logo">
+        <div class="category-container">
+            <span class="category" data-category="LEARNING-PATHS">LỘ TRÌNH HỌC TẬP</span>
+            <span class="category" data-category="CHALLENCES">THÁCH THỨC</span>
+            <span class="category" data-category="SOLUTIONS">GIẢI PHÁP</span>
+            <span class="category" data-category="ARTICLES">BÀI VIẾT</span>
+            <span class="category" data-category="UNLOCK-PRO">MỞ KHÓA PRO</span>
+        </div>
+        <a href="https://github.com/login" class="login-btn">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
+            Đăng nhập bằng GitHub
+        </a>
+    </div>
+    <div id="content">
+        <!-- Nội dung khác của bạn -->
+        <div class=" left-text">
+            Cải thiện kỹ năng lập trình của bạn bằng cách xây dựng các dự án thực tế
+            <p class="additional-text">Những thử thách được thiết kế chuyên nghiệp của chúng tôi giúp bạn có được kinh
+                nghiệm thực tế khi viết HTML, CSS và
+                JavaScript. Chúng tôi tạo ra các thiết kế để bạn có thể tập trung vào mã và thấy kỹ năng của mình tăng
+                vọt!</p>
+            <a href="https://github.com/login" class="login-btn">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
+                Đăng nhập bằng GitHub
+            </a>
+        </div>
+
+        <img src="https://www.frontendmentor.io/_next/image?url=%2Fstatic%2Fimages%2Fhome-hero.webp&w=3840&q=75"
+            alt="Hero Image" class="right-image">
+        <div class="white-box">
+            Tôi thực sự khuyên dùng Frontend Mentor. Bỏ qua việc tìm kiếm ý tưởng dự án và đắm mình vào những thử thách
+            có sẵn giúp
+            bạn nâng cao trình độ với tư cách là một nhà phát triển.
+
+        </div>
+        <div class="white-box">
+            Frontend Mentor là giải pháp đôi bên cùng có lợi. Bạn có thể nâng cao kỹ năng xây dựng trang web và thêm
+            các
+            dự án đã hoàn thành vào danh mục đầu tư của mình để giúp có được việc làm!
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.category').forEach(category => {
+            category.addEventListener('click', function () {
+                loadCategory(this.dataset.category);
+            });
+        });
+
+        function loadCategory(category) {
+            const content = document.getElementById('content');
+            content.innerHTML = '';
+
+            if (category === 'LEARNING-PATHS') {
+                content.innerHTML = `
+                <div id="content" style="display: flex; align-items: center;">
+                   <div class="left-text" style="max-width: 50%;">
+                    Lộ trình học tập
+                    <p class="additional-text">
+                        Lộ trình học tập của chúng tôi giúp bạn cải thiện kỹ năng front-end từng bước. 
+                        Mỗi lộ trình bao gồm một chủ đề khác nhau, hướng dẫn bạn qua các chủ đề phát triển front-end thiết yếu để trở thành một nhà phát triển lành nghề.
+                    </p>
+                    </div>
+                    <img src="https://www.frontendmentor.io/_next/image?url=%2Fstatic%2Fimages%2Flearning-paths-hero.webp&w=3840&q=75" alt="Learning Paths Hero Image" style="max-width: 50%; height: auto;">
+                </div>
+                `;
+            }
+        }
+        document.getElementById('logo').addEventListener('click', function () {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <div class="left-text">
+                    Cải thiện kỹ năng lập trình của bạn bằng cách xây dựng các dự án thực tế
+                    <p class="additional-text">Những thử thách được thiết kế chuyên nghiệp của chúng tôi giúp bạn có được kinh
+                        nghiệm thực tế khi viết HTML, CSS và
+                        JavaScript. Chúng tôi tạo ra các thiết kế để bạn có thể tập trung vào mã và thấy kỹ năng của mình tăng
+                        vọt!</p>
+                    <a href="https://github.com/login" class="login-btn">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
+                        Đăng nhập bằng GitHub
+                    </a>
+                </div>
+
+                <img src="https://www.frontendmentor.io/_next/image?url=%2Fstatic%2Fimages%2Fhome-hero.webp&w=3840&q=75"
+                    alt="Hero Image" class="right-image">
+                <div class="white-box">
+                    Tôi thực sự khuyên dùng Frontend Mentor. Bỏ qua việc tìm kiếm ý tưởng dự án và đắm mình vào những thử thách
+                    có sẵn giúp
+                    bạn nâng cao trình độ với tư cách là một nhà phát triển.
+
+                </div>
+                <div class="white-box">
+                    Frontend Mentor là giải pháp đôi bên cùng có lợi. Bạn có thể nâng cao kỹ năng xây dựng trang web và thêm
+                    các
+                    dự án đã hoàn thành vào danh mục đầu tư của mình để giúp có được việc làm!
+                </div>
+            `;
+        });
+
+
+    </script>
+
+
+
+</body>
+
+</html>
